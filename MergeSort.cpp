@@ -1,10 +1,12 @@
 #include <iostream>
 using namespace std;
+//declaring merge function
 void Merge(int arr[],int low,int mid,int high){
     int i,j,k,b[100];
      i=low;
      j=mid+1;
-     k=low;
+     k=0;
+
     while(i<=mid && j<=high){
         if(arr[i]<arr[j]){
             b[k]=arr[i];
@@ -28,6 +30,7 @@ void Merge(int arr[],int low,int mid,int high){
 
 
 }
+//Function for sorting array
 void MergeSort(int arr[],int low,int high){
     int mid;
     if(low<high){
@@ -37,6 +40,7 @@ void MergeSort(int arr[],int low,int high){
         Merge(arr,low,mid,high);
     }
 }
+//function for printing array
 void printArray(int arr[], int size)
 {
 	
@@ -44,7 +48,7 @@ void printArray(int arr[], int size)
 		cout << arr[i] << " ";
 	cout << endl;
 }
-
+//main function
 int main()
 {int arr[] = {8, 4, 11, 32, 1};
     int low=arr[0];
