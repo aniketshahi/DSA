@@ -108,43 +108,106 @@
 //    return 0;
 // }
 
-// Bubble sort
-#include <iostream>
-using namespace std;
-void printArray(int *A, int n)
-{
-   for (int i = 0; i < n; i++)
-   {
-      cout << A[i];
-      cout << ",";
-   }
-   cout << endl;
-}
+// // Bubble sort
+// #include <iostream>
+// using namespace std;
+// void printArray(int *A, int n)
+// {
+//    for (int i = 0; i < n; i++)
+//    {
+//       cout << A[i];
+//       cout << ",";
+//    }
+//    cout << endl;
+// }
 
-void BubbleSort(int *A, int n)
-{
-   int temp;
-   cout << "Starting bubble sort..."<<endl;
-   for (int i = 0; i < n - 1; i++)
-   {
-      for (int j = 0; j < n - 1 - i; j++)
-      {
-         if (A[j] > A[j + 1])
-         {
-            temp = A[j];
-            A[j] = A[j + 1];
-            A[j + 1] = temp;
-         }
-      }
-   }
-}
-int main()
-{
-   int arr[] = {3, 4, 5, 6, 7, 8, 9, 0};
-   int n = sizeof(arr) / sizeof(int);
-   printArray(arr, n);
-   BubbleSort(arr, n);
-   printArray(arr, n);
+// void BubbleSort(int *A, int n)
+// {
+//    int temp;
+//    cout << "Starting bubble sort..."<<endl;
+//    for (int i = 0; i < n - 1; i++)
+//    {
+//       for (int j = 0; j < n - 1 - i; j++)
+//       {
+//          if (A[j] > A[j + 1])
+//          {
+//             temp = A[j];
+//             A[j] = A[j + 1];
+//             A[j + 1] = temp;
+//          }
+//       }
+//    }
+// }
+// int main()
+// {
+//    int arr[] = {3, 4, 5, 6, 7, 8, 9, 0};
+//    int n = sizeof(arr) / sizeof(int);
+//    printArray(arr, n);
+//    BubbleSort(arr, n);
+//    printArray(arr, n);
 
-   return 0;
-}
+//    return 0;
+// }
+
+// Insertion sort
+// #include <iostream>
+// using namespace std;
+// void printArray(int *a, int n)
+// {
+//    for (int i = 0; i < n; i++)
+//    {
+//       cout << a[i];
+//       cout << ",";
+//    }
+//    cout << endl;
+//}
+// void InsertionSort(int *A,int n){
+//    int key,j;
+//    cout<<"Starting insertion sort..."<<endl;
+//    for(int i=1;i<n;i++){
+//       key=A[i];
+//       j=i-1;
+//       while(j>=0 && A[j]>key){
+//          A[j+1]=A[j];
+//          j--;
+
+//       }
+//       A[j+1]=key;
+//    }
+// }
+// void mergesort(int A[], int B[], int C[], int m, int n)
+// {
+//    int i, j, k;
+//    i = j = k = 0;
+//    while (i < m && j < n)
+//    {
+//       if (A[i] < B[j])
+//       {
+//          C[k] = A[i];
+//          i++, k++;
+//       }
+//       else
+//          C[k] = B[i];
+//       j++, k++;
+//    }
+//    while (i < m)
+//    {
+//       C[k] = A[i];
+//       i++, k++;
+//    }
+//    while (j < n)
+//    {
+//       C[k] = B[j];
+//       j++, k++;
+//    }
+// }
+// int main()
+// {
+//    int arr[] = {8, 4, 11, 32, 1};
+//    int n = sizeof(arr) / sizeof(int);
+//    printArray(arr, n);
+//    mergesort(arr, n);
+//    printArray(arr, n);
+
+//    return 0;
+// }
