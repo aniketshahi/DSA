@@ -67,3 +67,43 @@
 
 //    return 0;
 // }
+
+// Selction Sort
+#include <iostream>
+using namespace std;
+void printArray(int *a, int n)
+{
+   for (int i = 0; i < n; i++)
+   {
+      cout << a[i];
+      cout << ",";
+   }
+   cout << endl;
+}
+void SelectionSort(int *a, int n)
+{
+   cout << "Running Selection sort... " << endl;
+   int minIndex,temp;
+   for (int i = 0; i < n - 1; i++)
+   {
+      minIndex = i;
+      for (int j = i+1; j < n ;j++)
+      {
+         if(a[j]<a[minIndex]){
+           minIndex=j;
+         }
+      }
+      temp=a[i];
+      a[i]=a[minIndex];
+      a[minIndex]=temp;
+   }  
+}
+int main()
+{
+   int arr[] = {3, 4, 5, 6, 7, 8, 9, 0};
+   int n = sizeof(arr) / sizeof(int);
+   printArray(arr, n);
+   SelectionSort(arr, n);
+   printArray(arr,n);
+   return 0;
+}
