@@ -21,14 +21,14 @@ int BinarySearch(int arr[], int size, int element)
     else
     {
       high = mid - 1;
-      ;
+      
     }
   }
   return -1;
 }
 int main()
 {
-  int arr[] = {8, 4, 11, 32, 1};
+  int arr[] = {8, 4, 11, 32};
   int n;
   cout << "Enter element to search:";
   cin >> n;
