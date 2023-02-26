@@ -1,74 +1,77 @@
 #include<iostream>
 using namespace std;
 
-Stack()
-{
-  top = -1;
-} // end Stack constructor
+const int MAX_STACK = 5;
 
-bool Stack::isEmpty()
+class Stack
 {
-  return (top == -1);
-} // end isEmpty
-
-bool Stack::isFull()
-{
-  return (top == MAX_STACK - 1);
-} // end isFull
-
-void Stack::push(int newItem)
-{
-  if (isFull())
-  {
-    cout << "Stack is full" << endl;
-  }
-  else
-  {
-    top++;
-    items[top] = newItem;
-  }
-} // end push
-
-void Stack::pop()
-{
-  if (isEmpty())
-  {
-    cout << "Stack is empty" << endl;
-  }
-  else
-  {
-    top--;
-  }
-} // end pop
-
-int Stack::peek()
-{
-  if (isEmpty())
-  {
-    cout << "Stack is empty" << endl;
-    return -1;
-  }
-  else
-  {
-    return items[top];
-  }
-} // end peek
-
-void Stack::print()
-{
-  if (isEmpty())
-  {
-    cout << "Stack is empty" << endl;
-  }
-  else
-  {
-    for (int i = top; i >= 0; i--)
+  private:
+    int top;
+    int items[MAX_STACK];
+  public:
+    Stack()
     {
-      cout << items[i] << " ";
+      top = -1;
     }
-    cout << endl;
-  }
-} // end print
+    bool isEmpty()
+    {
+      return (top == -1);
+    }
+    bool isFull()
+    {
+      return (top == MAX_STACK - 1);
+    }
+    void push(int newItem)
+    {
+      if (isFull())
+      {
+        cout << "Stack is full" << endl;
+      }
+      else
+      {
+        top++;
+        items[top] = newItem;
+      }
+    }
+    void pop()
+    {
+      if (isEmpty())
+      {
+        cout << "Stack is empty" << endl;
+      }
+      else
+      {
+        top--;
+      }
+    }
+    int peek()
+    {
+      if (isEmpty())
+      {
+        cout << "Stack is empty" << endl;
+        return -1;
+      }
+      else
+      {
+        return items[top];
+      }
+    }
+    void print()
+    {
+      if (isEmpty())
+      {
+        cout << "Stack is empty" << endl;
+      }
+      else
+      {
+        for (int i = top; i >= 0; i--)
+        {
+          cout << items[i] << " ";
+        }
+        cout << endl;
+      }
+    }
+};
 
 int main()
 {
@@ -82,24 +85,19 @@ int main()
   s.pop();
   s.print();
   s.pop();  
-    s.print();  
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-    s.pop();
-    s.print();
-
-    
-    return 0;
+  s.print();  
+  s.pop();
+  s.print();
+  s.pop();
+  s.print();
+  s.pop();
+  s.print();
+  s.pop();
+  s.print();
+  s.pop();
+  s.print();
+  s.pop();
+  s.print();
+  
+  return 0;
 }
