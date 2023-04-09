@@ -1,7 +1,7 @@
-#include<iostream>
-using namespace std;    
+#include <iostream>
+using namespace std;
 
-int dijkstra (int graph[5][5], int start, int end)
+int dijkstra(int graph[5][5], int start, int end)
 {
     int distance[5];
     bool visited[5];
@@ -45,9 +45,7 @@ int main()
         {1, 0, 5, 6, 7},
         {2, 5, 0, 8, 9},
         {3, 6, 8, 0, 10},
-        {4, 7, 9, 10, 0}
-    };
+        {4, 7, 9, 10, 0}};
     cout << dijkstra(graph, 0, 4) << endl;
     return 0;
 }
-
