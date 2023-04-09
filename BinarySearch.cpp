@@ -21,8 +21,7 @@ int BinarySearch(int arr[], int size, int element)
     else
     {
       high = mid - 1;
-      
-    }
+        }
   }
   return -1;
 }
