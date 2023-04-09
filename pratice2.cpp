@@ -357,13 +357,12 @@ public:
         else
             return false;
     }
-    void insertNode(){
-
+    void insertNode()
+    {
     }
 };
 int main()
 {
-    
 
     return 0;
 }

@@ -34,8 +34,9 @@ void merge(int arr[], int mid, int low, int high)
         B[k] = arr[j];
         k++, j++;
     }
-    for(int i=low; i<=high;i++){
-        arr[i]=B[i];
+    for (int i = low; i <= high; i++)
+    {
+        arr[i] = B[i];
     }
 }
 void mergesort(int arr[], int low, int high)
@@ -54,7 +55,7 @@ int main()
     int arr[] = {3, 6, 8, 1, 6, 5};
     int size = sizeof(arr) / sizeof(int);
     printarr(arr, size);
-    mergesort(arr,0,size);
+    mergesort(arr, 0, size);
     printarr(arr, size);
 
     return 0;
