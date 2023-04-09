@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class stackusingqueue
@@ -6,7 +6,8 @@ class stackusingqueue
     queue<int> q1;
     queue<int> q2;
     int curr_size;
-    public:
+
+public:
     stackusingqueue()
     {
         curr_size = 0;
@@ -15,7 +16,7 @@ class stackusingqueue
     {
         curr_size++;
         q2.push(x);
-        while(!q1.empty())
+        while (!q1.empty())
         {
             q2.push(q1.front());
             q1.pop();
@@ -26,14 +27,14 @@ class stackusingqueue
     }
     void pop()
     {
-        if(q1.empty())
+        if (q1.empty())
             return;
         q1.pop();
         curr_size--;
     }
     int top()
     {
-        if(q1.empty())
+        if (q1.empty())
             return -1;
         return q1.front();
     }
