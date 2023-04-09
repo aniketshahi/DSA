@@ -1,42 +1,51 @@
 #include <iostream>
 using namespace std;
 
-struct Node {
+struct Node
+{
     int data;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
 };
 
-Node* newNode(int data) {
-    Node* node = new Node();
+Node *newNode(int data)
+{
+    Node *node = new Node();
     node->data = data;
     node->left = node->right = NULL;
     return node;
 }
 
-void dfs(Node* root) {
-    if (root == NULL) return;
+void dfs(Node *root)
+{
+    if (root == NULL)
+        return;
     cout << root->data << " ";
     dfs(root->left);
     dfs(root->right);
 }
 
-void dfs_inorder(Node* root) {
-    if (root == NULL) return;
+void dfs_inorder(Node *root)
+{
+    if (root == NULL)
+        return;
     dfs_inorder(root->left);
     cout << root->data << " ";
     dfs_inorder(root->right);
 }
 
-void dfs_postorder(Node* root) {
-    if (root == NULL) return;
+void dfs_postorder(Node *root)
+{
+    if (root == NULL)
+        return;
     dfs_postorder(root->left);
     dfs_postorder(root->right);
     cout << root->data << " ";
 }
 
-int main() {
-    Node* root = newNode(1);
+int main()
+{
+    Node *root = newNode(1);
     root->left = newNode(2);
     root->right = newNode(3);
     root->left->left = newNode(4);

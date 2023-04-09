@@ -241,19 +241,19 @@ public:
         }
     }
 };
-    int main()
-    {
-        int n;
-        cin >> n;
-        int arr[n];
-        for (int i = 0; i < n; i++)
-            cin >> arr[i];
-        int x;
-        cin >> x;
-        int output[100];
-        int j = 0;
-        allindices(arr, n, x, 0, output, j);
-        for (int i = 0; i < j; i++)
-            cout << output[i] << endl;
-        return 0;
-    }
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    int x;
+    cin >> x;
+    int output[100];
+    int j = 0;
+    allindices(arr, n, x, 0, output, j);
+    for (int i = 0; i < j; i++)
+        cout << output[i] << endl;
+    return 0;
+}

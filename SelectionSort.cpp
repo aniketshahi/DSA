@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-//Swap function
+// Swap function
 void swap(int *arr, int *minIndex)
 {
 	int temp = *arr;
@@ -17,28 +17,28 @@ void selectionSort(int arr[], int n)
 
 	// One by one move boundary of
 	// unsorted subarray
-	for (int i = 0; i < n-1; i++)
+	for (int i = 0; i < n - 1; i++)
 	{
-	
+
 		// Find the minimum element in
 		// unsorted array
 		minIndex = i;
-		for (int j = i+1; j < n; j++)
-		if (arr[j] < arr[minIndex])
-			minIndex = j;
+		for (int j = i + 1; j < n; j++)
+			if (arr[j] < arr[minIndex])
+				minIndex = j;
 
 		// Swap the found minimum element
 		// with the first element
-		if(minIndex!=i)
+		if (minIndex != i)
 			swap(&arr[minIndex], &arr[i]);
 	}
 }
 
-//Function to print an array
+// Function to print an array
 void printArray(int arr[], int size)
 {
-	
-	for (int i=0; i < size; i++)
+
+	for (int i = 0; i < size; i++)
 		cout << arr[i] << " ";
 	cout << endl;
 }
@@ -47,12 +47,13 @@ void printArray(int arr[], int size)
 int main()
 {
 	int arr[] = {64, 25, 12, 22, 11};
-	int n = sizeof(arr)/sizeof(arr[0]);
-    cout<<"Unsorted Array"<<endl;
-	printArray(arr,n);
-	cout << endl<<endl;
+	int n = sizeof(arr) / sizeof(arr[0]);
+	cout << "Unsorted Array" << endl;
+	printArray(arr, n);
+	cout << endl
+		 << endl;
 	selectionSort(arr, n);
-	cout << "Sorted array"<<endl;
+	cout << "Sorted array" << endl;
 	printArray(arr, n);
 	return 0;
 }
