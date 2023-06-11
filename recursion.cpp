@@ -93,18 +93,7 @@ public:
             return arr[0];
         return max(arr[n - 1], maxarray(arr, n - 1));
     }
-    int firstindex(int arr[], int n, int x)
-    {
-        if (n == 0)
-            return -1;
-        if (arr[0] == x)
-            return 0;
-        int index = firstindex(arr + 1, n - 1, x);
-        if (index == -1)
-            return -1;
-        else
-            return index + 1;
-    }
+    
     int lastindex(int arr[], int n, int x)
     {
         if (n == 0)
