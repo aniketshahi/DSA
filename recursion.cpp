@@ -93,7 +93,7 @@ public:
             return arr[0];
         return max(arr[n - 1], maxarray(arr, n - 1));
     }
-    
+
     int lastindex(int arr[], int n, int x)
     {
         if (n == 0)
@@ -241,7 +241,7 @@ int main()
     cin >> x;
     int output[100];
     int j = 0;
-    allindices(arr, n, x, 0, output, j);
+   
     for (int i = 0; i < j; i++)
         cout << output[i] << endl;
     return 0;
